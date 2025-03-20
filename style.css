@@ -1,138 +1,49 @@
- /* Building Bridges Section Styles */
-.bridges-section {
-padding: 4rem 0;
-background-color: #f5f7f8;
-overflow: hidden;
+/* Statistics Strip Styles */
+.statistics-strip {
+ background-color: #fff;
+ padding: 4rem 0;
+ margin-top: 4rem;
 }
 
-.bridges-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 0;
-align-items: center;
+.statistics-grid {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 2rem;
+ text-align: center;
 }
 
-.bridges-image-container {
-position: relative;
-height: 100%;
-margin-left: -1.5em; /* Adjusted to ensure image is flush with left edge */
-width: calc(100% + 1.5rem); /* Ensure the width accommodates the negative margin */
+.statistic-value {
+ font-size: 2.5rem;
+ font-weight: 700;
+ color: #003349;
+ margin-bottom: 0.5rem;
 }
 
-.bridges-image-main {
-position: relative;
-height: 460px;
-overflow: hidden;
-margin-left: 0;
-margin-right: 150px;
-border-top-right-radius: 8px;
-border-bottom-right-radius: 8px;
-border-right: 1px solid #fff; /* Add a subtle white line on the right edge */
+.statistic-label {
+ font-size: 1rem;
+ color: #4b5563;
 }
 
-.bridges-image-main img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+ .beneficial-grid {
+   grid-template-columns: repeat(2, 1fr);
+ }
 }
 
-.bridges-image-badge {
-position: absolute;
-bottom: 70px;
-right: 70px;
-width: 160px; /* Increased size */
-height: 160px; /* Increased size */
-background-color: #003349;
-border-radius: 50%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-color: white;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-border: 2px solid #fff; /* Add white border to create separation */
+@media (max-width: 768px) {
+ .beneficial-grid {
+   grid-template-columns: 1fr;
+ }
+
+ .statistics-grid {
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem 1rem;
+ }
 }
 
-.badge-diamond {
-margin-bottom: 8px;
-}
-
-.badge-diamond img {
-width: 24px;
-height: 24px;
-}
-
-.badge-content {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-}
-
-.badge-number {
-font-size: 2.5rem;
-font-weight: 700;
-line-height: 1;
-}
-
-.badge-text {
-font-size: 0.75rem;
-font-weight: 500;
-}
-
-.badge-year {
-font-size: 0.875rem;
-font-weight: 500;
-}
-
-.bridges-content {
-padding: 2rem 3rem;
-}
-
-.bridges-title {
-font-size: 3rem;
-font-weight: 700;
-color: #1a2937;
-margin-bottom: 1.5rem;
-line-height: 1.2;
-}
-
-.bridges-subtitle {
-display: block;
-color: #94a3b8;
-}
-
-.bridges-description {
-font-size: 1.15rem;
-font-weight: 500;
-line-height: 1.6;
-color: #464f5c;
-margin-bottom: 2rem;
-max-width: 500px;
-}
-
-.report-button {
-display: inline-flex;
-align-items: center;
-gap: 0.75rem;
-padding: 0.75rem 1.5rem;
-background-color: #003349;
-color: white;
-border-radius: 9999px;
-font-weight: 500;
-text-decoration: none;
-transition: all 0.3s ease;
-}
-
-.report-button:hover {
-background-color: #004a6b;
-transform: translateY(-2px);
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.report-button svg {
-width: 16px;
-height: 16px;
+@media (max-width: 480px) {
+ .statistics-grid {
+   grid-template-columns: 1fr;
+ }
 }
