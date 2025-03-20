@@ -1,73 +1,138 @@
-/* Beneficial Elements Section Styles */
-.beneficial-elements {
- padding: 5rem 0 0 0;
- background-color: #fff;
+ /* Building Bridges Section Styles */
+.bridges-section {
+padding: 4rem 0;
+background-color: #f5f7f8;
+overflow: hidden;
 }
 
-.beneficial-grid {
- display: grid;
- grid-template-columns: repeat(4, 1fr);
- gap: 1.5rem;
+.bridges-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0;
+align-items: center;
 }
 
-.beneficial-card {
- padding: 2rem;
- border-radius: 8px;
- height: 100%;
+.bridges-image-container {
+position: relative;
+height: 100%;
+margin-left: -1.5em; /* Adjusted to ensure image is flush with left edge */
+width: calc(100% + 1.5rem); /* Ensure the width accommodates the negative margin */
 }
 
-.primary-card {
- background-color: #fff;
+.bridges-image-main {
+position: relative;
+height: 460px;
+overflow: hidden;
+margin-left: 0;
+margin-right: 150px;
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+border-right: 1px solid #fff; /* Add a subtle white line on the right edge */
 }
 
-.feature-card {
- background-color: #f5f7f8;
+.bridges-image-main img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
 }
 
-.badge {
- display: inline-block;
- padding: 0.5rem 1rem;
- background-color: #003349;
- color: white;
- border-radius: 9999px;
- font-size: 0.875rem;
- font-weight: 500;
- margin-bottom: 1.5rem;
+.bridges-image-badge {
+position: absolute;
+bottom: 70px;
+right: 70px;
+width: 160px; /* Increased size */
+height: 160px; /* Increased size */
+background-color: #003349;
+border-radius: 50%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+border: 2px solid #fff; /* Add white border to create separation */
 }
 
-.beneficial-title {
- font-size: 3rem;
- font-weight: 700;
- margin-bottom: 1.5rem;
- color: #1a2937;
+.badge-diamond {
+margin-bottom: 8px;
 }
 
-.beneficial-description {
- font-size: 1.15rem;
- line-height: 1.6;
- color: #4b5563;
+.badge-diamond img {
+width: 24px;
+height: 24px;
 }
 
-.card-image {
- width: 100%;
- max-width: 120px;
- margin-bottom: 1.5rem;
+.badge-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 
-.card-image img {
- width: 100%;
- height: auto;
+.badge-number {
+font-size: 2.5rem;
+font-weight: 700;
+line-height: 1;
 }
 
-.card-title {
- font-size: 1.45rem;
- font-weight: 800;
- margin-bottom: 1rem;
- color: #1a2937;
+.badge-text {
+font-size: 0.75rem;
+font-weight: 500;
 }
 
-.card-description {
- font-size: 0.975rem;
- line-height: 1.6;
- color: #4b5563;
+.badge-year {
+font-size: 0.875rem;
+font-weight: 500;
+}
+
+.bridges-content {
+padding: 2rem 3rem;
+}
+
+.bridges-title {
+font-size: 3rem;
+font-weight: 700;
+color: #1a2937;
+margin-bottom: 1.5rem;
+line-height: 1.2;
+}
+
+.bridges-subtitle {
+display: block;
+color: #94a3b8;
+}
+
+.bridges-description {
+font-size: 1.15rem;
+font-weight: 500;
+line-height: 1.6;
+color: #464f5c;
+margin-bottom: 2rem;
+max-width: 500px;
+}
+
+.report-button {
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+padding: 0.75rem 1.5rem;
+background-color: #003349;
+color: white;
+border-radius: 9999px;
+font-weight: 500;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.report-button:hover {
+background-color: #004a6b;
+transform: translateY(-2px);
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report-button svg {
+width: 16px;
+height: 16px;
 }
