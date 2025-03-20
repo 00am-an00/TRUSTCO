@@ -1,49 +1,130 @@
-/* Statistics Strip Styles */
-.statistics-strip {
+/* Meet Our Founder Section Styles */
+.founder-section {
+ padding: 6rem 0;
  background-color: #fff;
- padding: 4rem 0;
- margin-top: 4rem;
 }
 
-.statistics-grid {
+.founder-grid {
  display: grid;
- grid-template-columns: repeat(4, 1fr);
- gap: 2rem;
- text-align: center;
+ grid-template-columns: 1fr 1fr;
+ gap: 4rem;
+ align-items: center;
 }
 
-.statistic-value {
+.founder-title {
  font-size: 2.5rem;
  font-weight: 700;
- color: #003349;
- margin-bottom: 0.5rem;
+ color: #1a2937;
+ margin-bottom: 2rem;
 }
 
-.statistic-label {
- font-size: 1rem;
- color: #4b5563;
+.founder-quote {
+ font-size: 1.125rem;
+ line-height: 1.7;
+ color: #3f4854;
+ margin-bottom: 2rem;
+ font-style: normal;
+ padding: 0;
+ border-left: none;
+}
+
+.founder-info {
+ margin-bottom: 2rem;
+}
+
+.founder-name {
+ font-size: 1.125rem;
+ font-weight: 600;
+ color: #1a2937;
+ margin-bottom: 0.25rem;
+}
+
+.founder-position {
+ font-size: 0.9375rem;
+ color: #6b7280;
+}
+
+.team-button {
+ display: inline-flex;
+ align-items: center;
+ gap: 0.75rem;
+ padding: 0.75rem 1.5rem;
+ background-color: #003349;
+ color: white;
+ border-radius: 9999px;
+ font-weight: 500;
+ text-decoration: none;
+ transition: all 0.3s ease;
+}
+
+.team-button:hover {
+ background-color: #004a6b;
+ transform: translateY(-2px);
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.founder-image-container {
+ position: relative;
+}
+
+.founder-image-main {
+ position: relative;
+ border-radius: 8px;
+ overflow: hidden;
+}
+
+.founder-image-main img {
+ width: 100%;
+ height: auto;
+ display: block;
+ border-radius: 1px;
+}
+
+.founder-image-secondary {
+ position: absolute;
+ bottom: -30px;
+ left: -30px;
+ width: 120px;
+ height: 120px;
+ border-radius: 50%;
+ overflow: hidden;
+ border: 4px solid white;
+ /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
+}
+
+.founder-image-secondary img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
- .beneficial-grid {
-   grid-template-columns: repeat(2, 1fr);
+@media (max-width: 992px) {
+ .founder-grid {
+   grid-template-columns: 1fr;
+   gap: 3rem;
+ }
+
+ .founder-image-container {
+   order: -1;
+   max-width: 500px;
+   margin: 0 auto;
  }
 }
 
-@media (max-width: 768px) {
- .beneficial-grid {
-   grid-template-columns: 1fr;
+@media (max-width: 576px) {
+ .founder-title {
+   font-size: 2rem;
  }
 
- .statistics-grid {
-   grid-template-columns: repeat(2, 1fr);
-   gap: 2rem 1rem;
+ .founder-quote {
+   font-size: 1rem;
  }
-}
 
-@media (max-width: 480px) {
- .statistics-grid {
-   grid-template-columns: 1fr;
+ .founder-image-secondary {
+   width: 100px;
+   height: 100px;
+   bottom: -20px;
+   left: -20px;
  }
 }
