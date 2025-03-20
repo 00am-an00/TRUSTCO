@@ -1,60 +1,105 @@
-/* Video Section - Ticket 9 */
-#video-section-9 {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: var(--light-bg);
+.high-level-sales {
+ background-color: #003349;
+ color: white;
+ padding: 5rem 0;
 }
 
-.video-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--foreground);
-    margin-bottom: 1rem;
+.sales-container {
+ display: flex;
+ flex-direction: column;
+ gap: 3rem;
 }
 
-.video-description {
-    font-size: 1.125rem;
-    color: #4b5563;
-    margin-bottom: 2rem;
+.sales-header {
+ display: flex;
+ justify-content: space-between;
+ gap: 2rem;
 }
 
-.video-thumbnail {
-    position: relative;
-    display: inline-block;
-    border-radius: 12px;
-    overflow: hidden;
+.sales-title-container {
+ flex: 1;
 }
 
-.video-thumbnail img {
-    width: 100%;
-    max-width: 720px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+.sales-description-container {
+ flex: 1;
+ display: flex;
+ align-items: center;
 }
 
-.video-thumbnail:hover img {
-    transform: scale(1.05);
+.sales-title {
+ font-size: 3rem;
+ font-weight: 700;
+ line-height: 1.2;
 }
 
-.play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s ease;
+.sales-highlight {
+ color: #ffce47;
 }
 
-.video-thumbnail:hover .play-icon {
-    background: rgba(0, 0, 0, 0.8);
+.sales-description {
+ font-size: 1.25rem;
+ line-height: 1.6;
 }
 
-.play-icon svg {
-    width: 50px;
-    height: 50px;
+.sales-image-container {
+ width: 100%;
+}
+
+.sales-image {
+ position: relative;
+ border-radius: 8px;
+ overflow: hidden;
+ width: 100%;
+}
+
+.sales-image img {
+ width: 100%;
+ height: auto;
+ display: block;
+ border-radius: 8px;
+}
+
+.play-button {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 64px;
+ height: 64px;
+ background-color: rgba(0, 51, 73, 0.7);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+
+.play-button:hover {
+ background-color: #003349;
+ transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ border-radius: 50%;
+ background-color: rgba(0, 51, 73, 0.7);
+ animation: pulse 2s infinite;
+ z-index: -1;
+}
+
+@media (max-width: 768px) {
+ .sales-header {
+   flex-direction: column;
+ }
+
+ .sales-title {
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+ }
 }
